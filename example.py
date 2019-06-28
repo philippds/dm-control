@@ -27,4 +27,4 @@ while not time_step.last() and time_step_counter < 500:
 	print(time_step.reward, time_step.discount, time_step.observation)
 
 # convert frames to video
-subprocess.call(['ffmpeg', 'framerate', '50', '-y', '-i', 'frames/frame-%010d.png', '-r', '30', '-pix_fmt', 'yuv420', 'video_name.mp4'])
+subprocess.call(['ffmpeg', '-framerate', '50', '-y', '-i', 'frames/frame-%010d.png', '-r', '30', '-pix_fmt', 'yuv420', 'video_name.mp4'])
